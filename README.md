@@ -79,9 +79,9 @@ WHEN I click on the Logout button
 
 THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
 
-![Image 1](./21-mern-homework-demo-01.gif)
-![Image 2](./21-mern-homework-demo-02.gif)
-![Image 3](./21-mern-homework-demo-03.gif)
+![Image 1](./client/src/images/googlebooks-app-01.gif)
+![Image 2](./client/src/images/googlebooks-app-02.gif)
+![Image 3](./client/src/images/googlebooks-app-03.gif)
 
   Deployed Application: https://radiant-scrubland-61432.herokuapp.com/
 

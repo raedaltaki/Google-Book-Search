@@ -21,6 +21,7 @@ const SearchBooks = () => {
   const [saveBook, { error }] = useMutation(SAVE_BOOK , {
     update(cache, { data: { saveBook } }) 
     {
+      console.log(cache, { data: { saveBook } }) ;
         try 
         {
             // could potentially not exist yet, so wrap in a try...catch
@@ -34,13 +35,13 @@ const SearchBooks = () => {
             console.error(e);
         }
     
-        // update me object's cache, appending new thought to the end of the array
-        const { me } = cache.readQuery({ query: GET_ME });
-        cache.writeQuery(
-        {
-            query: GET_ME,
-            data: { me: { ...me, savedBooks: [...me.savedBooks, saveBook] } }
-        });
+        // // update me object's cache, appending new thought to the end of the array
+        // const { me } = cache.readQuery({ query: GET_ME });
+        // cache.writeQuery(
+        // {
+        //     query: GET_ME,
+        //     data: { me: { ...me, savedBooks: [...me.savedBooks, saveBook] } }
+        // });
     }
 });
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
